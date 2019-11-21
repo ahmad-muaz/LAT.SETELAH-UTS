@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void genap(int n);
+
+void genap(int n) {
+	int jml=0;
+	for (int i = 1; i <= n; i++) {
+		if (i % 2 == 0) {
+			jml = jml + 1;
+		}
+	}
+	cout << "Maka bilangan genap : " << jml;
+}
+
+int main() {
+	int n;
+	cout << "Ketikkan jumlah bilangan : ";
+	cin >> n;
+	genap(n);
+}
