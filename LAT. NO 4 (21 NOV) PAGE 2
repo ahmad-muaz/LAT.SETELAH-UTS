@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+
+struct {
+int jam;
+int menit;
+int detik;
+} 
+masuk, keluar, selisih;
+
+int main(){
+
+cout << "Jam Awal " << endl;
+cout << "----------" << endl;
+cout << "Jam   : "; cin >>masuk.jam;
+cout << "Menit : "; cin >>masuk.menit;
+cout << "Detik : "; cin >>masuk.detik;
+
+cout <<endl <<endl;
+
+
+cout << "Jam Akhir " << endl;
+cout << "----------" << endl;
+cout << "Jam   : "; cin >>keluar.jam;
+cout << "Menit : "; cin >>keluar.menit;
+cout << "Detik : "; cin >>keluar.detik;
+
+
+if ((keluar.detik - masuk.detik) < 0) {
+selisih.detik = (60 + keluar.detik) - masuk.detik;
+keluar.menit;
+}
+else {
+selisih.detik = keluar.detik - masuk.detik;
+}
+
+if ((keluar.menit- masuk.menit) < 0) {
+selisih.menit= (60 + keluar.menit) - masuk.menit;
+keluar.jam;
+}
+else {
+selisih.menit = keluar.menit- masuk.menit;
+}
+
+selisih.jam = keluar.jam - masuk.jam;
+
+cout << endl;
+cout << endl;
+cout << "Total Durasi " << endl;
+cout << "------------" << endl;
+cout << "Jam   : " << selisih.jam << endl;
+cout << "Menit : " << selisih.menit << endl;
+cout << "Detik : " << selisih.detik << endl;
+
+cout << endl;
+cout <<"Selisih dalam detik = " << selisih.jam*3600 + selisih.menit*60 + selisih.detik << endl;
+
+
+return 0;
+}
+ 
+ 
