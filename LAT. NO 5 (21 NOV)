@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+void tanggal(int days, int month, int years) {
+	int days1;
+	days1 = days - 1;
+	cout << "Kemarin  : " << days1 << "-" << month << "-" << years << endl;
+}
+
+int main() {
+	int days, month, years;
+	cout << "Masukkan Tanggal : ";
+	cin >> days;
+	cout << "Masukkan Bulan   : ";
+	cin >> month;
+	cout << "Masukkan Tahun   : ";
+	cin >> years;
+	
+	if (days >= 32) {
+		cout << endl;
+		cout << "Not Input Data";
+		return 0;
+	}
+	if (month >= 13) {
+		cout << endl;
+		cout << "Not Input Data";
+		return 0;
+	}
+
+	cout << endl;
+	cout << "-----------------------" << endl;
+	cout << endl;
+	cout << "Hari ini : " << days << "-" << month << "-" << years << endl;
+	tanggal(days, month, years);
+}
