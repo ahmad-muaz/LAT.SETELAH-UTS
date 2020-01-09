@@ -1,7 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void genap(int n);
+int main() {
+	void genap(int n);
+	int n;
+	cout << "Ketikkan jumlah bilangan : ";
+	cin >> n;
+	genap(n);
+}
 
 void genap(int n) {
 	int jml=0;
@@ -11,11 +17,5 @@ void genap(int n) {
 		}
 	}
 	cout << "Maka bilangan genap : " << jml;
-}
 
-int main() {
-	int n;
-	cout << "Ketikkan jumlah bilangan : ";
-	cin >> n;
-	genap(n);
 }
